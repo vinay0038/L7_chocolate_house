@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Inventory</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <body>
+       <center> <h1>Ingredients List</h1></center>
+        <a href="{% url 'ingredient_create' %}"><button class="btn">Add New Ingredient</button></a>
+        <ul>
+            {% for ingredient in ingredients %}
+                <li>
+                    {{ ingredient.name }} - {{ ingredient.stock }} units
+                    <a href="{% url 'ingredient_update' ingredient.pk %}"><button class="btn">Edit</button></a>
+                  <a href="{% url 'ingredient_delete' ingredient.pk %}"> <button class="btn">Delete</button> </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+{% include 'footer.html' %}
+</html>

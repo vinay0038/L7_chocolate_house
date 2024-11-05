@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Allergy Concern Submission</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <h1>Submit Allergy Concern</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</body>
+</html>
+{% include 'footer.html' %}

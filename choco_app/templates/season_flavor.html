@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Flavor Offerings</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <h1>Seasonal Flavor Offerings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Available From</th>
+                <th>Available To</th>
+                <th>Status</th>
+                <th>Actions</th> <!-- New column for action buttons -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for flavor in flavors %}
+            <tr>
+                <td>{{ flavor.name }}</td>
+                <td>{{ flavor.description }}</td>
+                <td>{{ flavor.available_from }}</td>
+                <td>{{ flavor.available_to }}</td>
+                <td>{{ flavor.is_active|yesno:"Active,Inactive" }}</td>
+                <td>
+                    <a href="{% url 'update_seasonal_flavor' flavor.id %}">Edit</a> |
+                    <a href="{% url 'delete_seasonal_flavor' flavor.id %}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No seasonal flavors available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'add_seasonal_flavor' %}" ><button class="btn">Add New Flavor</button></a>
+</body>
+</html>
+{% include 'footer.html' %}

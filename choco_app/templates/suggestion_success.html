@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion Submitted</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>Your flavor suggestion has been submitted successfully.</p>
+   <button class="btn"> <a href="{% url 'customer_suggestion' %}">Submit Another Suggestion</a></button>
+</body>
+{% include 'footer.html' %}
+</html>

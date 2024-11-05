@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Seasonal Flavor</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <h1>Delete Seasonal Flavor</h1>
+<p>Are you sure you want to delete the flavor "{{ flavor.name }}"?</p>
+<p>Description: {{ flavor.description }}</p>
+<p>Available From: {{ flavor.available_from }}</p>
+<p>Available To: {{ flavor.available_to }}</p>
+<p>Status: {{ flavor.is_active|yesno:"Active,Inactive" }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn">Confirm Delete</button>
+</form>
+<button class="btn"><a href="{% url 'seasonal_flavors' %}">Cancel</a></button>
+
+    
+</body>
+</html>
+{% include 'footer.html' %}

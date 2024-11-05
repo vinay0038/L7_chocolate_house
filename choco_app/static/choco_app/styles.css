@@ -1,0 +1,84 @@
+
+
+html body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8B5B29;
+    color: rgb(231, 231, 62);
+    height: 100%;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.feature {
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+    color: yellow;
+    border-radius: 8px;
+    background-size: cover; 
+    background-position: center; 
+}
+
+#seasonal-flavors {
+    background-image: url('/static/choco_app/images/ingredients_inventory.jpg'); 
+}
+
+#ingredients-inventory {
+    background-image: url('/static/choco_app/images/seasonal_flavors.jpg');
+}
+
+#customer-suggestions {
+    background-image: url('/static/choco_app/images/customer_suggestions.jpg'); 
+}
+
+#allergy-concerns {
+    background-image: url('/static/choco_app/images/allergy_concerns.jpg'); 
+}
+
+
+@media (max-width: 768px) {
+    .feature {
+        width: 100%; 
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff8c00; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e07b00; 
+}
+
+
+
+th, td {
+    padding: 12px; 
+    border: 1px solid #ddd; 
+}
+
+form input{
+    
+    background-color: #F5DEB3; 
+  
+}
+
+form textarea{
+    
+    background-color: #F5DEB3; 
+  
+}

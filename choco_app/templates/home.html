@@ -1,0 +1,38 @@
+{% load static %} 
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate House Home</title>
+    <link rel="stylesheet" href="{% static 'choco_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="feature" id="seasonal-flavors">
+            <h2>Seasonal Flavor Offerings</h2>
+            <p>Explore our limited-time flavors made from the finest ingredients!</p>
+            <a href="{% url 'seasonal_flavors' %}" class="btn">View Seasonal Flavors</a>
+        </div>
+        <div class="feature" id="ingredients-inventory">
+            <h2>Ingredients Inventory</h2>
+            <p>Check the availability of our ingredients to ensure the best quality chocolates!</p>
+            <a href="{% url 'ingredient_list' %}" class="btn">View Ingredients Inventory</a>
+        </div>
+        <div class="feature" id="customer-suggestions">
+            <h2>Customer Suggestions</h2>
+            <p>We value your feedback! Share your flavor suggestions with us.</p>
+            <a href="{% url 'customer_suggestion' %}" class="btn">Submit a Suggestion</a>
+        </div>
+        <div class="feature" id="allergy-concerns">
+            <h2>Allergy Concerns</h2>
+            <p>Let us know about any allergy concerns regarding our products.</p>
+            <a href="{% url 'allergy_concern_create' %}" class="btn">Report an Allergy Concern</a>
+        </div>
+    </div>
+
+{% include 'footer.html' %}
+</body>
+</html>
