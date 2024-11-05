@@ -246,7 +246,7 @@ def add_seasonal_flavor(request):
         form = SeasonalFlavorForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('seasonal_flavor_list')  
+            return redirect('seasonal_flavors')  
     else:
         form = SeasonalFlavorForm()
     return render(request, 'add_seasonal_flavor.html', {'form': form})
