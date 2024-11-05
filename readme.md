@@ -24,7 +24,7 @@ Follow these steps to set up the Chocolate House web application on your local m
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/vinay0038/L7_chocolate_house.git
    cd chocolate-house
 
 2. **Create a virtual environment:**
@@ -73,7 +73,7 @@ http://127.0.0.1:8000/inventory
  **Preconditions**: At least one ingredient must exist in the database.
 
  **Steps:**
-    Navigate to the ingredients list page at http://127.0.0.1:8000/ingredients/.
+    Navigate to the ingredients list page at http://127.0.0.1:8000/inventory/ingredients/.
 
   **Expected Result:** The page should load successfully and display a list of all ingredients.
 
@@ -87,7 +87,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions**: none
 
 **Steps:**
-    Navigate to the create ingredient page at http://127.0.0.1:8000/ingredients/create/.
+    Navigate to the create ingredient page at http://127.0.0.1:8000/inventory/ingredients/create/.
     Fill in the ingredient form with valid data.
     Submit the form.
 
@@ -104,7 +104,7 @@ http://127.0.0.1:8000/inventory
 
 **Steps:**
 
-    Navigate to the ingredient update page for an existing ingredient at http://127.0.0.1:8000/ingredients/update/<ingredient_id>/.
+    Navigate to the ingredient update page for an existing ingredient at http://127.0.0.1:8000/inventory/ingredients/update/<ingredient_id>/.
     Modify the ingredient details.
     Submit the form.
 
@@ -120,7 +120,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions:** At least one ingredient must exist in the database.
 
 **Steps:**
-    Navigate to the ingredient delete page for an existing ingredient at http://127.0.0.1:8000/ingredients/delete/<ingredient_id>/.
+    Navigate to the ingredient delete page for an existing ingredient at http://127.0.0.1:8000/inventory/ingredients/delete/<ingredient_id>/.
     Confirm the deletion.
     Expected Result: The ingredient should be deleted successfully, and the ingredient list page should no longer display the deleted ingredient.
 
@@ -134,7 +134,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions:** User is on the suggestion page.
 
 **Steps:**
-    Navigate to the suggestion page at http://127.0.0.1:8000/suggest/.
+    Navigate to the suggestion page at http://127.0.0.1:8000/inventory/suggest/.
     Fill out the suggestion form with valid data.
     Submit the form.
 
@@ -150,7 +150,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions:** At least one seasonal flavor must exist in the database.
 
 **Steps:**
-    Navigate to the seasonal flavors page at http://127.0.0.1:8000/seasonal_flavors/.
+    Navigate to the seasonal flavors page at http://127.0.0.1:8000/inventory/seasonal_flavors/.
     Expected Result: The page should load successfully and display a list of all seasonal chocolate flavors.
 
 
@@ -163,7 +163,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions:** User is on the allergy concern page.
 
 **Steps:**
-    Navigate to the allergy concern page at http://127.0.0.1:8000/allergy_concern/.
+    Navigate to the allergy concern page at http://127.0.0.1:8000/inventory/allergy_concern/.
     Fill out the allergy concern form with valid data.
     Submit the form.
 
@@ -179,7 +179,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions**: None.
 
 **Steps**:
-    Navigate to the contact page at http://127.0.0.1:8000/contact/.
+    Navigate to the contact page at http://127.0.0.1:8000/inventory/contact/.
 
 **Expected Result**: The contact page should load successfully without errors.
 
@@ -193,7 +193,7 @@ http://127.0.0.1:8000/inventory
 **Preconditions**: None.
 
 **Steps**:
-    Navigate to the about page at http://127.0.0.1:8000/about/.
+    Navigate to the about page at http://127.0.0.1:8000/inventory/about/.
 
 **Expected Result**: The about page should load successfully without errors.
 
